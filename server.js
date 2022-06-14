@@ -1,3 +1,4 @@
+const middle = require("./middleware/index");
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
@@ -19,6 +20,8 @@ database = {
     },
   ],
 };
+
+app.use(middle.auth);
 
 // GET - List all users
 

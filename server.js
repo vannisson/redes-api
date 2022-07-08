@@ -143,9 +143,7 @@ app.delete("/delete/:cpf", (req, res) => {
   }
 });
 
-app.head("/", (req, res) => {
-  res.set("x-user", "abcd");
-});
+app.head("/", (req, res) => {});
 
 app.options("/*", function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
